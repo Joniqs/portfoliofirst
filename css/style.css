@@ -1,0 +1,205 @@
+:root {
+  --background: rgba(62, 5, 133, 0.98);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  margin-left: 4rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  margin-right: 10rem;
+}
+
+nav li {
+  margin-bottom: 1.5rem;
+  margin-left: 3rem;
+  margin-top: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.logo {
+  position: absolute;
+  top: 1.25rem;
+  left: 2rem;
+  z-index: 10;
+  color: rgba(242, 242, 242, 1);
+  text-transform: uppercase;
+}
+
+.hero-banner img {
+  background: white;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  object-fit: cover;  
+}
+
+.headline {
+  font-size: 5rem;
+  color: rgba(242, 237, 247, 0.97);
+  position: absolute;
+  top: 40%;
+  left: 7.5%;
+  text-transform: uppercase;
+}
+
+.page-wrapper {
+  margin: 0;
+  background-color: var(--background);
+  width: 100%;
+  height: 25%;
+}
+
+.center-mb {
+  margin: 1rem 1rem;
+  text-align: center;
+}
+
+.whitefont {
+  color: #fff;
+}
+
+.gridwrapper {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+  "mainproject mainproject"
+  "sideproject1 sideproject2";
+  gap: 2rem;
+  height: 100vh;
+}
+
+#mainproject {
+  grid-area: mainproject;
+  background-image: url("../images/website_1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+}
+
+#sideproject1 {
+  grid-area: sideproject1;
+  background-image: url("../images/website_2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+}
+
+#sideproject2 {
+  grid-area: sideproject2;
+  background-image: url("../images/website_3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+}
+
+
+.griditem {
+  min-height: 500px;
+  height: 70vh;
+}
+
+.page-section {
+  margin-top: 3rem;
+  background-color: var(--background);
+  width: 100%;
+}
+
+.contact {
+  height: 25vh;
+}
+
+@media screen and (max-width: 576px) {
+  .logo {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .head-banner img {
+    margin-top: 50vh;
+    width: 100%;
+  }
+
+  .headline {
+    font-size: 2rem;
+    color: rgba(242, 237, 247, 0.97);
+    position: absolute;
+    top: 40%;
+    left: 7.5%;
+    text-transform: uppercase;
+  }
+}
+  
